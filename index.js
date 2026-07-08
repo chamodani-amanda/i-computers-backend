@@ -16,7 +16,7 @@ mongoose.connect(mongoDBURL).then( //mongodb ekt connect krl denn kiyn de meyin 
     //mongoose kiynne mongodb database ekta sambanda wenna udau karana function ek. me function ekta mongoDBURL kiyn variable eka danna one, 
     // eya mongodb database eke url eka thiyena variable ekk
     () => {
-    console.log('Connected to MongoDB successfully') //hryt mongodb connect unth meya print wei
+    console.log('Connected to MongoDB successfully ') //hryt mongodb connect unth meya print wei
    }
 )  
 .catch((error) => {
