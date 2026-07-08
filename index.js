@@ -4,8 +4,13 @@ import studentRouter from './routers/studentRouter.js'
 import userRouter from './routers/userRouter.js'
 import authenticate from './middlewares/authenticate.js'
 import productRouter from './routers/productRouter.js'
+import dotenv from 'dotenv' //dotenv kiyn function ek import krnw. me function ek .env file ek wge thyna variable tika read krnw udau karai
 
-const mongoDBURL = "mongodb://admin:1234@ac-mdezls2-shard-00-00.vetj1un.mongodb.net:27017,ac-mdezls2-shard-00-01.vetj1un.mongodb.net:27017,ac-mdezls2-shard-00-02.vetj1un.mongodb.net:27017/dev?ssl=true&replicaSet=atlas-7jwno8-shard-0&authSource=admin&appName=Cluster0"
+dotenv.config()//mehidi folder eke.env kiyl file ekk thynw nm eke thyna variables mekt load wei
+
+
+const mongoDBURL = process.env.MONGO_URI //mongodb database eke url eka thyna variable ekk, me variable eka .env file ek wge thyna. me variable eka read krnw udau krnw dotenv function ek
+
 mongoose.connect(mongoDBURL).then( //mongodb ekt connect krl denn kiyn de meyin kiyai, meya poronduwak wge
     //MEYA internet ekharaha sidu we, emnisa podihri delay ekk thiynn plwn, errord siduwiy heka
     //mongoose kiynne mongodb database ekta sambanda wenna udau karana function ek. me function ekta mongoDBURL kiyn variable eka danna one, 

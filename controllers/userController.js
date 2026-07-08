@@ -2,6 +2,8 @@ import User from '../models/user.js' //user model eka import krnw
 import bcrypt from 'bcrypt' //bcrypt kiynne password encrypt krnw, meya password encrypt krnw udau karai, meya poronduwak wge
                             //meyata plwn salt value denna , password wlt
 import jwt from 'jsonwebtoken' //jwt kiynne token generate krnw
+import dotenv from 'dotenv' //dotenv kiyn function ek import krnw. me function ek .env file ek wge thyna variable tika read krnw udau karai
+dotenv.config()//mehidi folder eke.env kiyl file ekk thynw nm eke thyna variables mekt load wei
 
 export async function createUser(req, res) {
 
@@ -83,7 +85,7 @@ export async function loginUser(req, res) {
 
                 },
 
-                "secretkey143!!" //secret key ekk laba dei, 
+                process.env.JWT_SECRET_KEY  //secret key ekk laba dei, 
             )
 
             res.json({message : "Login successful", token : token}) //token ekk response eke me wenna
