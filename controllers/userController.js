@@ -88,7 +88,7 @@ export async function loginUser(req, res) {
                 process.env.JWT_SECRET_KEY  //secret key ekk laba dei, 
             )
 
-            res.json({message : "Login successful", token : token}) //token ekk response eke me wenna
+            res.json({message : "Login successful ", token : token}) //token ekk response eke me wenna
 
             //res.json({message : "Login successful"})
 
