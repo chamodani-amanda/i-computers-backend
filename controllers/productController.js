@@ -120,7 +120,7 @@ export async function updateProduct(req,res) {
     }
     else{
 
-        res.status(403).json({message : "Only admins can update products "})
+        res.status(403).json({message : "Only admins can update products    "})
         return
     }
 
